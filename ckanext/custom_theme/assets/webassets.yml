@@ -12,3 +12,8 @@
 #   output: ckanext-custom_theme/%(version)s-custom_theme.css
 #   contents:
 #     - css/custom_theme.css
+
+custom_theme-css:
+  output: ckanext-custom_theme/%(version)s-custom_theme.css
+  contents:
+    - dist/css/styles.css
