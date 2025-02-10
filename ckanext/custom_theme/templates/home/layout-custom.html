@@ -1,0 +1,93 @@
+<div role="main" class="tw-bg-white">
+  <div class="container">
+    <div class="row row1">
+      <div class="col-md-12 col1">
+        {% snippet 'home/snippets/hero.html', tags=h.get_facet_items_dict('tags', c.search_facets, limit=3) %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div role="statistic" class="hero">
+  <div class="container">
+    <div class="row row1">
+      <div class="col-md-12 col1">
+        {% snippet 'home/snippets/custom.stats.html' %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{#
+<div role="main" class="hero">
+  <div class="container">
+    <div class="row row1">
+      <div class="col-md-6 col1">
+        {% block search %}
+          {% snippet 'home/snippets/search.html' %}
+        {% endblock %}
+        {% block stats %}
+          {% snippet 'home/snippets/stats.html' %}
+        {% endblock %}
+      </div>
+      <div class="col-md-6 col2">
+        {% block promoted %}
+          {% snippet 'home/snippets/promoted.html' %}
+        {% endblock %}
+      </div>
+    </div>
+  </div>
+</div>
+#}
+
+<div>
+  <div class="container tw-h-1/2 ">
+    <div class="row row1 tw-mt-40">
+      <div class="col-md-12 col1">
+          {% snippet 'home/snippets/stats.html' %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div role="main">
+  <div class="container">
+    <div class="row row2">
+      <div class="col-md-6 col2">
+        {% block featured_organization %}
+          {% snippet 'home/snippets/featured_organization.html' %}
+        {% endblock %}
+      </div>
+      <div class="col-md-6 col1">
+        {% block featured_group %}
+          {% snippet 'home/snippets/featured_group.html' %}
+        {% endblock %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div role="main" class="hero">
+  <div class="container">
+    <div class="row row2">
+      <div class="col-md-6 col2">
+        {% block publikasi_section_count %}
+        <div class="tw-text-center">
+            <span class="tw-text-9xl tw-font-bold">50</span>
+            <p class="tw-text-5xl tw-font-bold">Publikasi</p>
+            <button class="btn 
+                hover:tw-bg-red-500 hover:tw-border-0 hover:tw-rounded-full  
+                hover:tw-p-5 hover:tw-min-w-[180px] tw-bg-transparent">
+                Lihat -> 
+            </button>
+        </div>
+        {% endblock %}
+      </div>
+      <div class="col-md-6 col1">
+        {% block publikasi_latest %}
+          {% snippet 'publikasi/snippets/publikasi_list.html', data=h.get_latest_publikasi() %}
+        {% endblock %}
+      </div>
+    </div>
+  </div>
+</div>

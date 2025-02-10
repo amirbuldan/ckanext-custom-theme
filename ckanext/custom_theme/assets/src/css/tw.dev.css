@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .title-divider {
+        @apply tw-block tw-m-auto tw-max-w-24 tw-border-0 tw-border-t-8 tw-border-solid tw-border-slate-800 tw-mb-4
+    }
+}
