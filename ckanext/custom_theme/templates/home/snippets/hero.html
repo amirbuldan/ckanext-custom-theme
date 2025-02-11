@@ -1,0 +1,55 @@
+{#
+    hero snippet documentation
+
+#}
+<div class="container tw-min-h-[70dvh] tw-flex tw-flex-col tw-justify-center tw-gap-8">
+    <div class="text-center">
+        <div class="tw-flex tw-gap-4 tw-justify-center">
+            <img src="{{ h.url_for_static('icon_data_search.png') }}" width="auto" height="58px">
+            <!-- <h1 class="tw-font-extrabold tw-text-7xl tw-leading-none" style="font-family: poppins;">SATU DATA</h1> -->
+            <h1 class="tw-font-extrabold tw-text-5xl tw-leading-none tw-text-left tw-m-0 tw-p-0" style="font-family: poppins;">PORTAL<br>SATU DATA</h1>
+        </div>
+        <h1 class="tw-font-extrabold tw-text-7xl tw-leading-none tw-m-1 tw-p-0" style="font-family: poppins;">KOTA BIMA</h1>
+
+        {% set intro = g.site_intro_text %}
+        {% if intro %}
+        {{ h.render_markdown(intro) }}
+        {% else %}
+        <p class="tw-mt-10">
+            {% trans %}This is a nice introductory paragraph about CKAN or the site
+            in general. We don't have any copy to go here yet but soon we will
+            {% endtrans %}
+        </p>
+        {% endif %}
+    </div>
+    <div>
+        <div class="tw-flex tw-flex-col tw-mb-3 tw-w-full tw-justify-center tw-items-center">            
+            <form action="{% url_for 'dataset.search' %}" method="get" class="
+            tw-flex tw-flex-row md:tw-w-2/3 tw-my-8 md:tw-m-8 tw-bg-slate-50 tw-p-3 tw-rounded-full tw-border-8 tw-border-black" style="border: 0.2px solid gray">
+                  <i class="bi bi-search tw-p-auto tw-m-auto tw-text-xl tw-ms-5"></i>
+                  <input type="text" id="field-main-search" class="form-control w-100 rounded-pill 
+                  tw-bg-transparent tw-border-0" name="q" value="" autocomplete="off"
+                  style="box-shadow:none" placeholder="search dataset...">
+                  &nbsp;
+                  <button type="submit" class="btn btn-primary tw-rounded-full tw-font-medium tw-w-64">search</button>
+            </form>
+
+            <div>
+            <span class="tw-font-bold">Popular tag:</span> 
+            {% for tag in tags %}
+            <a href="{% url_for 'dataset.search', tags=tag.name %}" class="text-decoration-none badge 
+                tw-bg-transparent tw-border tw-border-solid tw-border-gray-700 
+                tw-py-2 tw-px-3 tw-font-normal tw-text-gray-800
+                hover:tw-bg-accent-02 hover:tw-text-primary-color">
+                {{ h.truncate(tag.display_name, 22) }}
+            </a>
+
+            {% endfor %}
+            <!-- <span class="badge rounded-pill text-bg-light py-2 px-3">pendidikan</span>
+            <span class="badge rounded-pill text-bg-light py-2 px-3">kesehatan</span>
+            <span class="badge rounded-pill text-bg-light py-2 px-3">kependudukan</span> -->
+
+            </div>
+        </div>
+    </div>
+</div>
