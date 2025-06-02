@@ -9,6 +9,31 @@
 
     .btn-styled1 {
         @apply tw-border tw-border-solid tw-border-white tw-rounded-full tw-text-white tw-font-medium 
-            tw-bg-transparent tw-w-64 tw-py-4 hover:tw-text-blue-950 hover:tw-bg-white hover:tw-font-bold
+            tw-bg-transparent tw-min-w-64 tw-py-4 hover:tw-text-blue-950 hover:tw-bg-white hover:tw-font-bold
+    }
+    .btn-styled2 {
+        @apply tw-font-bold hover:tw-border-accent-01 tw-text-accent-01 
+            tw-bg-transparent tw-min-w-64 tw-py-4 hover:tw-border hover:tw-border-solid hover:tw-text-white hover:tw-bg-accent-01 hover:tw-font-bold
+            after:content-['➜']
+    }
+    .cs-card-item {
+        @apply tw-flex tw-flex-col tw-justify-between tw-shadow-xl tw-shadow-gray-700
+    }
+    .cs-card-item .cs-card-content {
+        @apply tw-flex tw-flex-col tw-justify-between
+    }
+    .cs-card-item .cs-card-footer{
+        @apply tw-self-center tw-place-self-end
+    }
+    .bg-img-01 {
+        background-image: url('http://localhost:5000/Gedung Walikota Bima.png');
+        background-attachment: fixed;  
+        @apply tw-bg-cover
+    }
+    .cs-title-style01 {
+        @apply tw-text-[36px] tw-mt-[20px] tw-mb-[10px] tw-font-bold tw-leading-[1.1] tw-text-center tw-text-primary-color tw-font-poppins
+    }
+    .cs-title-divider {
+        @apply tw-m-auto tw-min-w-24 tw-border-0 tw-border-t-8 tw-border-solid tw-border-primary-color tw-mb-4
     }
 }

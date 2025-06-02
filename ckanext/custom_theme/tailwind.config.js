@@ -17,6 +17,9 @@ module.exports = {
           'accent-01': '#EB8317',
           'accent-02': '#10375C',
       },
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
+      }
     },
   }
 }

@@ -1,9 +1,10 @@
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
-
+import ckanext.custom_theme.helpers as Helpers
 
 class CustomThemePlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
+    plugins.implements(plugins.ITemplateHelpers)
 
     # IConfigurer
 
@@ -12,3 +13,9 @@ class CustomThemePlugin(plugins.SingletonPlugin):
         toolkit.add_public_directory(config_, 'public')
         toolkit.add_resource('assets',
             'custom_theme')
+    
+    #ITemplateHelpers
+    def get_helpers(self):
+        return {
+            'dataset_list': Helpers.dataset_list
+        }

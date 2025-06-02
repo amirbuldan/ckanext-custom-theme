@@ -3,3 +3,8 @@
 
 #}
 
+    <div class="tw-flex tw-gap-10 tw-flex-wrap tw-justify-evenly">
+        {% for publikasi in data %}
+            {% snippet 'home/snippets/publikasi_card_item.html', publikasi=publikasi %}
+        {% endfor %}
+    </div>
