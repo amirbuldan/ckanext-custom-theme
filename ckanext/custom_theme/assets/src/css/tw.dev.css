@@ -14,7 +14,11 @@
     .btn-styled2 {
         @apply tw-font-bold hover:tw-border-accent-01 tw-text-accent-01 
             tw-bg-transparent tw-min-w-64 tw-py-4 hover:tw-border hover:tw-border-solid hover:tw-text-white hover:tw-bg-accent-01 hover:tw-font-bold
-            after:content-['➜']
+            after:tw-content-['➜']
+    }
+    .btn-styled-yellow {
+        @apply tw-border tw-border-solid tw-border-accent-01 tw-rounded-full tw-text-accent-01 tw-font-medium 
+            tw-bg-transparent tw-min-w-64 tw-py-4 hover:tw-text-white hover:tw-bg-accent-01 hover:tw-font-bold
     }
     .cs-card-item {
         @apply tw-flex tw-flex-col tw-justify-between tw-shadow-xl tw-shadow-gray-700
@@ -25,13 +29,85 @@
     .cs-card-item .cs-card-footer{
         @apply tw-self-center tw-place-self-end
     }
+    .cs-stats-list {
+        @apply tw-flex tw-flex-col tw-gap-8 tw-justify-center tw-items-end
+            md:tw-flex-row
+    }
+    .cs-stats-card {
+        @apply tw-border-0 tw-bg-white tw-min-h-80 tw-shadow-xl tw-rounded-3xl 
+            tw-text-center tw-p-4 tw-flex tw-flex-col tw-gap-12 tw-justify-between tw-font-poppins
+    }
+    .cs-stats-card .cs-stats-card-icon {
+        @apply tw-p-8 tw-text-[#FFBB77] tw-text-6xl
+    }
+    .cs-stats-card .cs-stats-card-content {
+        @apply tw-flex-initial tw-h-52 tw-content-center tw-text-accent-02
+    }
+    .cs-stats-card .cs-stats-card-footer  {
+        @apply tw-rounded-2xl tw-bg-[#FFBB77] tw-p-6 tw-m-4
+    }
+    .cs-stats-card-footer-text {
+        @apply tw-text-center tw-font-bold tw-text-3xl tw-text-primary-color
+    }
+
+    .cs-publ-card {
+        /* ukuran card 2:3 */
+        @apply tw-relative tw-rounded-xl tw-bg-white tw-shadow-xl tw-shadow-gray-700
+        tw-max-w-80 tw-max-h-[30rem] tw-p-0 tw-overflow-hidden 
+    }
+    .cs-publ-card-img {
+        @apply tw-w-full tw-h-full tw-object-cover tw-block
+    }
+    .cs-publ-card-content {
+        @apply tw-absolute tw-bottom-8 tw-w-11/12 tw-left-1/2 tw-translate-x-[-50%]
+          tw-mx-auto tw-py-3 tw-px-4 tw-bg-white/80 tw-backdrop-blur-2xl
+          tw-rounded-md tw-h-[40%]
+    }
+    .cs-publ-card .cs-publ-card-link {
+        @apply before:tw-content-[""] tw-absolute tw-top-0 tw-right-0 tw-left-0 tw-bottom-0 tw-z-0
+    }
+    .absolute-x-center {
+        @apply tw-absolute tw-left-1/2 tw-translate-x-[-50%]
+    }
+    .absolute-y-center {
+        @apply tw-absolute tw-top-1/2 tw-translate-y-[-50%]
+    }
+
+
     .bg-img-01 {
         background-image: url('http://localhost:5000/Gedung Walikota Bima.png');
         background-attachment: fixed;  
         @apply tw-bg-cover
     }
+    .bg-img-02 {
+        /* background-image: url('https://images.unsplash.com/photo-1491895200222-0fc4a4c35e18?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); */
+        background-attachment: fixed;
+        @apply tw-bg-cover
+    }
+    .bg-img-03 {
+        /* background-image: url('https://images.unsplash.com/photo-1643594483568-6205e2d07c38?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); */
+        background-attachment: fixed;
+        background-position: 50% 20%;
+        @apply tw-bg-cover
+    }
+    .bg-img-04 {
+        background-image: url('./Masjid Terapung.jpg');
+        background-attachment: fixed;
+        background-position: 50% 20%;
+        @apply tw-bg-cover
+    }
+
+    
+
     .cs-title-style01 {
         @apply tw-text-[36px] tw-mt-[20px] tw-mb-[10px] tw-font-bold tw-leading-[1.1] tw-text-center tw-text-primary-color tw-font-poppins
+    }
+    .cs-title-style02 {
+        @apply tw-text-[36px] tw-mt-[20px] tw-mb-[10px] tw-font-extrabold tw-uppercase tw-leading-[1.1] tw-text-center tw-text-accent-02 tw-font-poppins
+        tw-drop-shadow-2xl
+    }
+    .cs-counter {
+        @apply tw-text-9xl tw-font-bold tw-text-accent-01 tw-font-poppins
     }
     .cs-title-divider {
         @apply tw-m-auto tw-min-w-24 tw-border-0 tw-border-t-8 tw-border-solid tw-border-primary-color tw-mb-4

@@ -1,0 +1,43 @@
+{# 
+    section untuk menampilkan dataset terbaru
+    
+    - menggunakan 2 row
+    - row #1: menggunakan 2 col, col kiri untuk judul
+      - postiion absolute dan z-index : negative (-)
+    - row #2: menggunaakan 2 col, col akan memuat konten
+
+#}
+{% set stats = h.get_site_statistics() %}
+
+<div class="split-section -bg-img-01 tw-bg-primary-color" data-module="gsap_split_column">
+
+  <div class="row tw-max-w-[100vw]">
+    <div class="col-md-6">
+      <div class="tw-min-h-screen tw-flex tw-flex-col tw-justify-center 
+        tw-items-center split-section-pinned">
+        <h3 class="cs-title-style02 ">Datasets</h3>
+        <p class="cs-counter tw-my-4">{{ h.SI_number_span(stats.dataset_count) }}</p>
+        <div class="col-md-12 tw-text-center tw-mt-4">
+          <a class="btn btn-styled-yellow" href="{{ h.url_for('publikasi.index')}}">
+            Lihat Selengkapnya ➜
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="tw-py-4 tw-px-10 tw-my-56 tw-ml-[-96px] tw-mr-24
+       tw-rounded-lg bg-primary tw-shadow-2xl">
+        <h3 class="tw-mb-10 tw-text-4xl text-center">
+          <span class="glyphicon glyphicon-sort-by-attributes"></span>
+          &nbsp;
+          Dataset Terbaru
+        </h3>
+        {% block newest_datasets %}
+          {% snippet 'snippets/package_list.html', packages=h.dataset_list() %}
+        {% endblock %}
+      </div>
+    </div>
+  </div>
+
+</div>

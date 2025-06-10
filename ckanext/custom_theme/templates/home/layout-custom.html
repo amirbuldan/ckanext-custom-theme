@@ -8,7 +8,7 @@
   </div>
 </div>
 
-<div role="statistic" class="hero">
+<div role="statistic" class="bg-img-02 tw-bg-background-03">
   <div class="container">
     <div class="row row1">
       <div class="col-md-12 col1">
@@ -16,7 +16,11 @@
       </div>
     </div>
   </div>
+    <div class="tw-bg-primary-color tw-min-h-96 tw-mt-[-130px] tw-w-full">
+      &nbsp;
+    </div>
 </div>
+
 
 {#
 <div role="main" class="hero">
@@ -40,6 +44,7 @@
 </div>
 #}
 
+{#
 <div role="main">
   <div class="container">
     <div class="row row2">
@@ -56,40 +61,13 @@
     </div>
   </div>
 </div>
+#}
 
-<div class="main mt-5 tw-max-h-100 split-section bg-img-01" data-module="tsgsap_split_column">
-
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 tw-min-h-[100%] tw-flex tw-flex-col tw-justify-center 
-        tw-items-center split-section-pinned">
-        <h3 class="cs-title-style01 tw-text-slate-800">Datasheets</h3>
-        <div class="cs-title-divider tw-border-slate-800">&nbsp;</div>
-        <!-- <p>526</p> -->
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-offset-2 col-md-8">
-        <div class="tw-py-4 tw-px-10 tw-mt-0 tw-rounded-lg bg-primary tw-shadow-2xl">
-          <h3 class="tw-mb-10 tw-text-4xl text-center">
-            <span class="glyphicon glyphicon-sort-by-attributes"></span>
-            &nbsp;
-            Dataset Terbaru
-          </h3>
-        {% block newest_datasets %}
-          {% snippet 'snippets/package_list.html', packages=h.dataset_list() %}
-        {% endblock %}
-        </div>
-      </div>
-    </div>
-   
-  </div>
-</div>
+{% snippet 'home/snippets/section__latest_publikasi.html' %}
 
 <div role="main">
   <div class="container split-section">
-    <div class="row row2 tw-mb-14">
+    <div class="row tw-mb-14">
       <div class="col-md-12 col2">
         {% block publikasi_section_count %}
           <h3 class="h1 tw-text-center tw-text-primary-color tw-font-poppins">Publikasi Terbaru</h3>
@@ -107,7 +85,7 @@
         {% endblock %}
       </div>
     </div>
-    <div class="row">
+    <div class="row tw-mt-8 tw-mb-24">
       <div class="col-md-12 text-center">
         <a class="btn btn-styled1" href="{{ h.url_for('publikasi.index')}}">
           Lihat Selengkapnya ➜
@@ -116,3 +94,15 @@
     </div>
   </div>
 </div>
+
+{% set bg_img_url = h.url_for_static('background-02.jpg', _external=True) %}
+<div role="main" class="bg-img-04 tw-min-h-96" style="background-image: url('{{bg_img_url}}');">
+&nbsp;
+</div>
+
+{#
+<div class="hero">
+      {% snippet 'home/snippets/test-perspective.html' %}
+  </div>
+</div>
+#}

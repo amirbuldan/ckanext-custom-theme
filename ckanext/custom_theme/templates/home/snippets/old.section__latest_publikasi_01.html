@@ -1,0 +1,28 @@
+{# 
+    section untuk menampilkan dataset terbaru
+#}
+<div class="main mt-5 tw-max-h-100 split-section bg-img-01" data-module="tsgsap_split_column">
+
+  <div class="row">
+      <div class="col-md-6 tw-min-h-[100%] tw-flex tw-flex-col tw-justify-center 
+        tw-items-center split-section-pinned">
+        <h3 class="cs-title-style01 tw-text-slate-800">Datasheets</h3>
+        <div class="cs-title-divider tw-border-slate-800">&nbsp;</div>
+        <!-- <p>526</p> -->
+      </div>
+
+      <div class="col-md-6">
+        <div class="tw-right-7 tw-py-4 tw-px-10 tw-mt-0 tw-rounded-lg bg-primary tw-shadow-2xl">
+          <h3 class="tw-mb-10 tw-text-4xl text-center">
+            <span class="glyphicon glyphicon-sort-by-attributes"></span>
+            &nbsp;
+            Dataset Terbaru
+          </h3>
+        {% block newest_datasets %}
+          {% snippet 'snippets/package_list.html', packages=h.dataset_list() %}
+        {% endblock %}
+        </div>
+      </div>
+   
+  </div>
+</div>

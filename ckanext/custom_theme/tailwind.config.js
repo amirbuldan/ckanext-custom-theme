@@ -19,6 +19,11 @@ module.exports = {
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
+      },
+      backgroundImage: {
+        'background-01': "url('/background-01.jpg')",
+        'background-02': "url('/background-02.jpg')",
+        'background-03': "url('/background-03.jpg')",
       }
     },
   }

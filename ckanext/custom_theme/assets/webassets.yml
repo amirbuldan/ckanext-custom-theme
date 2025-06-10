@@ -20,9 +20,10 @@ custom_theme-css:
 
 module_gsap_split_column_js:
   filter: rjsmin
-  output: ckanext-custom_theme/%(version)s-gsap-split-column.js
+  output: ckanext-custom_theme/%(version)s-gsap-scripts.js
   contents:
     - dist/js/gsap_split_column.js
+    - dist/js/gsap_scroll_speed.js
   extra:
     preload:
       - base/main

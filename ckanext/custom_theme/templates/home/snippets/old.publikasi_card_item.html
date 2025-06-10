@@ -1,0 +1,29 @@
+{#
+    publikasi card item 
+
+#}
+
+{% block publikasi_card_list %}
+    <div class="tw-p-4 cs-card-item tw-bg-slate-50 tw-rounded-xl tw-max-w-80">
+        <div class="cs-card-content">
+            <figure class="cs-card-image tw-m-[-10px]">
+                {%- set cover_img_src -%}
+                    {% if publikasi.cover_image %}
+                        {{- '/uploads/'+ publikasi.cover_image -}}
+                    {% else %}
+                        {{- '/images/placeholder_publikasi_file.jpg' -}}
+                    {% endif %}
+                {%- endset -%}
+                <img src="{{ cover_img_src }}" alt="" width="100%" style="object-fit: cover; aspect-ratio: 1 / 1" class="img-rounded tw-rounded-br-none tw-rounded-bl-none">
+            </figure>
+            <div class="tw-my-8">
+                <h4>{{ publikasi.title }}</h4>
+            </div>
+        </div>
+
+        <div class="cs-card-footer tw-text-center">
+            <a href="{{ h.url_for('publikasi.get', id=publikasi.id)}}" class="btn btn-seemore hover:after:tw-content-['\00a0➜'] hover:after:tw-whitespace-pre">Lihat Selengkapnya</a>
+        </div>
+    </div>
+    
+{% endblock %}

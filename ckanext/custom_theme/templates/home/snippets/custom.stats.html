@@ -1,38 +1,61 @@
 {% set stats = h.get_site_statistics() %}
 
 <section class="tw-bg-body-secondary tw-mb-24">
-  <h3 class="h1 tw-text-center text-primary-emphasis" style="font-family: poppins;">Statistik</h3>
-  <div class="row">
-    <div class="tw-m-auto tw-max-w-24 tw-border-0 tw-border-t-8 tw-border-solid tw-border-slate-800  mb-4">&nbsp;</div>
-    <!-- <div class="title-divider"></div> -->
+  <div class="row tw-mt-8 tw-mb-24">
+    <div class="col-md-12 col2">
+      <!-- <h3 class="h1 tw-text-center text-primary-emphasis" style="font-family: poppins;">Statistik</h3> -->
+      <h3 class="h1 cs-title-style02">Statistik</h3>
+      <div class="row">
+        <div class="tw-m-auto tw-max-w-24 tw-border-0 tw-border-t-8 tw-border-solid tw-border-accent-02  mb-4">&nbsp;</div>
+        <!-- <div class="title-divider"></div> -->
+      </div>
+    </div>
   </div>
-  <div class="container mt-2">
-    <div class="tw-flex tw-flex-col md:tw-flex-row tw-gap-8">
-      <div class="col-md-4 px-4">
-        <div class="card tw-border-0 tw-bg-white tw-min-h-80 tw-shadow-xl tw-rounded-lg 
-            text-center tw-p-4 tw-flex tw-flex-col">
-          <p class="h1 tw-text-8xl tw-p-auto tw-m-auto">
-            <strong>{{ h.SI_number_span(stats.organization_count) }}</strong>
-          </p>
-          <a href="{{ h.url_for(controller='organization', action='index') }}" class="card-title text-center">Organizations</a>
+  <div class="mt-2">
+    <div class="cs-stats-list tw-relative tw-z-10">
+      <div class="col-md-3">
+        <div class="cs-stats-card">
+          <div class="cs-stats-card-icon">
+            <span class="glyphicon glyphicon-th"></span>
+          </div>
+          <div class="cs-stats-card-content">
+            <p class="h1 tw-text-8xl tw-p-auto tw-m-auto">
+              <strong>{{ h.SI_number_span(stats.organization_count) }}</strong>
+            </p>
+          </div>
+          <div class="cs-stats-card-footer">
+            <a href="{{ h.url_for(controller='organization', action='index') }}" class="cs-stats-card-footer-text">Organizations</a>
+          </div>
         </div>
       </div>
-      <div class="col-md-4 px-4">
-        <div class="card tw-border-0 tw-bg-white tw-min-h-80 tw-shadow-xl tw-rounded-lg 
-            text-center tw-p-4 tw-flex tw-flex-col">
-          <p class="h1 tw-text-8xl tw-p-auto tw-m-auto">
-            <strong>{{ h.SI_number_span(stats.group_count) }}</strong>
-          </p>
-          <a href="{{ h.url_for(controller='group', action='index') }}" class="card-title text-center">Groups</a>
+      <div class="col-md-3 tw-w-[28%]">
+        <div class="tw-min-h-[42rem] cs-stats-card">
+          <div class="cs-stats-card-icon">
+            <span class="glyphicon glyphicon-th"></span>
+          </div>
+          <div class="cs-stats-card-content">
+            <p class="h1 tw-text-9xl tw-p-auto tw-m-auto">
+              <strong>{{ h.SI_number_span(stats.dataset_count) }}</strong>
+            </p>
+          </div>
+          <div class="cs-stats-card-footer">
+            <a href="{{ h.url_for('dataset.search') }}" class="cs-stats-card-footer-text">Datasets</a>
+          </div>
         </div>
       </div>
-      <div class="col-md-4 px-4">
-        <div class="card tw-border-0 tw-bg-white tw-min-h-80 tw-shadow-xl tw-rounded-lg 
-            text-center tw-p-4 tw-flex tw-flex-col">
-          <p class="h1 tw-text-8xl tw-p-auto tw-m-auto">
-            <strong>{{ h.SI_number_span(stats.dataset_count) }}</strong>
-          </p>
-          <a href="{{ h.url_for('dataset.search') }}" class="card-title text-center">Datasets</a>
+      <div class="col-md-3">
+        <div class="cs-stats-card">
+          <div class="cs-stats-card-icon">
+            <span class="glyphicon glyphicon-th"></span>
+          </div>
+          <div class="cs-stats-card-content">
+            <p class="h1 tw-text-8xl tw-p-auto tw-m-auto">
+              <strong>{{ h.SI_number_span(stats.group_count) }}</strong>
+            </p>
+          </div>
+          <div class="cs-stats-card-footer">
+            <a href="{{ h.url_for(controller='group', action='index') }}" class="cs-stats-card-footer-text">Groups</a>
+          </div>
         </div>
       </div>
       <!-- <div class="col-md-3 px-4">
