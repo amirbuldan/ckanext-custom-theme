@@ -30,11 +30,13 @@
         @apply tw-self-center tw-place-self-end
     }
     .cs-stats-list {
-        @apply tw-flex tw-flex-col tw-gap-8 tw-justify-center tw-items-end
+        @apply tw-flex tw-flex-col 
             md:tw-flex-row
+            md:tw-gap-4 md:tw-justify-center md:tw-items-end
+            lg:tw-gap-8
     }
     .cs-stats-card {
-        @apply tw-border-0 tw-bg-white tw-min-h-80 tw-shadow-xl tw-rounded-3xl 
+        @apply tw-border-0 tw-bg-white tw-min-h-80 tw-shadow-xl tw-rounded-3xl tw-flex-none
             tw-text-center tw-p-4 tw-flex tw-flex-col tw-gap-12 tw-justify-between tw-font-poppins
     }
     .cs-stats-card .cs-stats-card-icon {
@@ -54,6 +56,9 @@
         /* ukuran card 2:3 */
         @apply tw-relative tw-rounded-xl tw-bg-white tw-shadow-xl tw-shadow-gray-700
         tw-max-w-80 tw-max-h-[30rem] tw-p-0 tw-overflow-hidden 
+    }
+    .cs-publ-card:hover {
+        @apply tw-scale-[1.02] tw-ease-in-out
     }
     .cs-publ-card-img {
         @apply tw-w-full tw-h-full tw-object-cover tw-block

@@ -222,21 +222,28 @@
 
 .cs-stats-list {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: center;
-  gap: 2rem
+  flex-direction: column
 }
 
 @media (min-width: 768px) {
   .cs-stats-list {
-    flex-direction: row
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 1rem
+  }
+}
+
+@media (min-width: 1024px) {
+  .cs-stats-list {
+    gap: 2rem
   }
 }
 
 .cs-stats-card {
   display: flex;
   min-height: 20rem;
+  flex: none;
   flex-direction: column;
   justify-content: space-between;
   gap: 3rem;
@@ -300,6 +307,13 @@
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   --tw-shadow-color: #374151;
   --tw-shadow: var(--tw-shadow-colored)
+}
+
+.cs-publ-card:hover {
+  --tw-scale-x: 1.02;
+  --tw-scale-y: 1.02;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .cs-publ-card-img {
@@ -619,10 +633,6 @@
 
 .tw-w-64 {
   width: 16rem
-}
-
-.tw-w-\[28\%\] {
-  width: 28%
 }
 
 .tw-w-dvw {
@@ -1037,5 +1047,15 @@
 
   .md\:tw-flex-row {
     flex-direction: row
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:tw-w-\[25\%\] {
+    width: 25%
+  }
+
+  .lg\:tw-w-\[28\%\] {
+    width: 28%
   }
 }
