@@ -16,7 +16,8 @@
 custom_theme-css:
   output: ckanext-custom_theme/%(version)s-custom_theme.css
   contents:
-    - dist/css/styles.css
+    # - dist/css/styles.css
+    - dist/css/styles.min.css
 
 module_gsap_split_column_js:
   filter: rjsmin
