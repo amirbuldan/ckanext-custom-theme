@@ -432,6 +432,27 @@
   border-color: rgb(244 246 255 / var(--tw-border-opacity, 1))
 }
 
+/**
+    * CUSTOM CLASS CSS for MEDIA extension
+    */
+
+/* .cs-media-card {
+        @apply tw-p-4 tw-bg-red-400 tw-rounded-2xl 
+    } */
+
+/* .cs-media-card-cover {
+
+    }
+    .cs-media-card-cover .cs-media-card-cover-ornament {
+
+    }
+    .cs-media-card-content {
+
+    }
+    .cs-media-card-content .cs-media-title {
+
+    } */
+
 .tw-absolute {
   position: absolute
 }
@@ -539,8 +560,8 @@
   margin-bottom: 14rem
 }
 
-.tw-mb-\[-10px\] {
-  margin-bottom: -10px
+.tw-mb-\[-8px\] {
+  margin-bottom: -8px
 }
 
 .tw-ml-\[-100px\] {
@@ -581,26 +602,6 @@
 
 .tw-mt-\[-130px\] {
   margin-top: -130px
-}
-
-.tw-mb-\[-1rem\] {
-  margin-bottom: -1rem
-}
-
-.tw-mb-\[-16px\] {
-  margin-bottom: -16px
-}
-
-.tw-mb-\[-25px\] {
-  margin-bottom: -25px
-}
-
-.tw-mb-\[-8px\] {
-  margin-bottom: -8px
-}
-
-.tw-inline-block {
-  display: inline-block
 }
 
 .tw-flex {
@@ -887,10 +888,6 @@
   padding: 1rem
 }
 
-.tw-p-5 {
-  padding: 1.25rem
-}
-
 .tw-px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem
@@ -936,10 +933,6 @@
 
 .tw-font-poppins {
   font-family: Poppins, sans-serif
-}
-
-.tw-font-mono {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
 }
 
 .tw-text-2xl {

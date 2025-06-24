@@ -17,5 +17,6 @@ class CustomThemePlugin(plugins.SingletonPlugin):
     #ITemplateHelpers
     def get_helpers(self):
         return {
-            'dataset_list': Helpers.dataset_list
+            'dataset_list': Helpers.dataset_list,
+            'latest_dataset_list': Helpers.latest_dataset_list,
         }

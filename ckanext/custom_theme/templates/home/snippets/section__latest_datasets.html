@@ -18,7 +18,7 @@
         <h3 class="cs-title-style02 ">Datasets</h3>
         <p class="cs-counter tw-my-4">{{ h.SI_number_span(stats.dataset_count) }}</p>
         <div class="col-md-12 tw-text-center tw-mt-4">
-          <a class="btn btn-styled-yellow" href="{{ h.url_for('publikasi.index')}}">
+          <a class="btn btn-styled-yellow" href="{{ h.url_for('dataset.search')}}">
             Lihat Selengkapnya ➜
           </a>
         </div>
@@ -34,7 +34,7 @@
           Dataset Terbaru
         </h3>
         {% block newest_datasets %}
-          {% snippet 'snippets/package_list.html', packages=h.dataset_list() %}
+          {% snippet 'snippets/package_list.html', packages=h.latest_dataset_list() %}
         {% endblock %}
       </div>
     </div>
