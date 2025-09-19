@@ -81,7 +81,7 @@
     <div class="row">
       <div class="col-md-12 col1 tw-mb-14">
         {% block publikasi_latest %}
-          {% snippet 'home/snippets/publikasi_latest.html', data=h.get_latest_publikasi() %}
+          {% snippet 'home/snippets/publikasi_latest.html', data=h.get_latest_publikasi(5) %}
         {% endblock %}
       </div>
     </div>
